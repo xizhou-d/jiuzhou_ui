@@ -1,4 +1,6 @@
 node_modules
 
 # dumi
-.umi
+.dumi/tmp
+.dumi/tmp-test
+.dumi/tmp-production
