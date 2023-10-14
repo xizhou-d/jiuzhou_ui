@@ -1,15 +1,8 @@
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
-var _react = _interopRequireDefault(require("react"));
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 var _excluded = ["children", "kind"];
+import t from 'prop-types';
+import React from 'react';
 var prefixCls = 'xianzao-alert';
 var kinds = {
   info: '#5352ED',
@@ -21,8 +14,8 @@ var Alert = function Alert(_ref) {
   var children = _ref.children,
     _ref$kind = _ref.kind,
     kind = _ref$kind === void 0 ? 'info' : _ref$kind,
-    rest = (0, _objectWithoutProperties2.default)(_ref, _excluded);
-  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    rest = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("div", _extends({
     className: prefixCls,
     style: {
       background: kinds[kind]
@@ -30,6 +23,6 @@ var Alert = function Alert(_ref) {
   }, rest), children);
 };
 Alert.propTypes = {
-  kind: _propTypes.default.oneOf(['info', 'positive', 'negative', 'warning'])
+  kind: t.oneOf(['info', 'positive', 'negative', 'warning'])
 };
-var _default = exports.default = Alert;
+export default Alert;
